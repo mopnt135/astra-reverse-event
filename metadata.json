@@ -1,0 +1,8 @@
+{
+  "name": "아스트라 리버스 사전예약",
+  "description": "아스트라 리버스 사전예약 모바일 이벤트 신청 페이지",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

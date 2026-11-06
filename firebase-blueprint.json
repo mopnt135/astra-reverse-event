@@ -1,0 +1,26 @@
+{
+  "entities": {
+    "cheer": {
+      "title": "cheer",
+      "description": "아스트라 리버스 사전예약 참가자 레코드",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "레코드 고유 식별자" },
+        "message": { "type": "string", "maxLength": 200, "description": "응원 메시지" },
+        "platform": { "type": "string", "description": "신청 플랫폼(모바일/PC)" },
+        "os": { "type": "string", "description": "운영체제(안드로이드/iOS)" },
+        "contact": { "type": "string", "maxLength": 60, "description": "가린 연락처" },
+        "marketing": { "type": "boolean", "description": "마케팅 수신 동의 여부" },
+        "checked": { "type": "boolean", "description": "관리자 확인 여부" },
+        "createdAt": { "type": "number", "description": "신청 시각(밀리초)" }
+      },
+      "required": ["id", "platform", "os", "contact", "marketing", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/cheers/{cheerId}": {
+      "schema": { "$ref": "#/entities/cheer" },
+      "description": "사전예약 참가자 신청 레코드 컬렉션"
+    }
+  }
+}
